@@ -31,7 +31,7 @@ def check_message(message):
     if text and link(text):
         if not is_admin:
             bot.delete_message(chat_id, message.message_id)
-            bot.send_message(chat_id, f"{message.from_user.first_name}, siz havfsiz link yuborishingiz mumkin emas!")
+            bot.send_message(chat_id, f"{message.from_user.first_name})
 
     if text:
         for bad_word in bad_words:
@@ -51,5 +51,5 @@ def webhook():
 
 if __name__ == '__main__':
     bot.remove_webhook()
-    bot.set_webhook(url='https://bot-t6re.onrender.com/webhook')
+    bot.set_webhook(url='https://conroller-bot.onrender.com/webhook')
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
