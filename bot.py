@@ -51,5 +51,5 @@ def webhook():
 
 if __name__ == '__main__':
     bot.remove_webhook()
-    bot.set_webhook(url='https://github.com/iymona007/bot/blob/main/bot.py/webhook')
+    bot.set_webhook(url='https://conroller-bot-1.onrender.com/webhook')
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
