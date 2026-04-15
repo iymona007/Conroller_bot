@@ -31,7 +31,7 @@ def check_message(message):
     if text and link(text):
         if not is_admin:
             bot.delete_message(chat_id, message.message_id)
-            bot.send_message(chat_id, f"{message.from_user.first_name})
+            bot.send_message(chat_id, f"{message.from_user.first_name}")
 
     if text:
         for bad_word in bad_words:
