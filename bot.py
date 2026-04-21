@@ -23,7 +23,7 @@ bad_words = ['jinni', 'ahmoq','yaramas', 'dumb', 'stupid', 'idiot', 'fool', 'sil
 def check_message(message):
     user_id = message.from_user.id
     chat_id = message.chat.id
-    text = message.text
+    text = message.text or ""
 
     member = bot.get_chat_member(chat_id, user_id)
     is_admin = member.status in ['administrator', 'creator']
